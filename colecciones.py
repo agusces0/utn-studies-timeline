@@ -1,7 +1,7 @@
 # Este es el comienzo del segundo semestre en Laboratorio II
 # Colecciones en python
 
-## Colecciones | 16-08-2022
+## Colecciones parte 1 | 16-08-2022
 
 # Listas
 # Son un conjunto de elementos
@@ -104,3 +104,124 @@ print('\n', cocina)
 
 # Eliminar una tupla
 del cocina
+
+## Colecciones parte 2 | 23-08-2022
+
+# Tipo SET
+# ACLARACIÓN: SET no tiene indices, ni se puede editar
+planetas = {'Tierra', 'Marte', 'Venus', 'Saturno'}
+print(planetas)
+print(len(planetas))
+
+# Revisar si un elemento se encuentra dentro de SET. (También se puede hacer en list & tuple)
+print('Marte' in planetas)
+# Revisar si un elemento NO se encuentra dentro de SET
+print('Tierra' not in planetas)
+
+# Agregamos un elemento a SET
+# ACLARACIÓN: Por más que se agregue un elemento igual a otro, no se duplica
+planetas.add('Neptuno')
+print(planetas)
+
+# Eliminar un elemento de SET
+planetas.remove('Venus')
+print(planetas)
+planetas.discard('Tierra') # NO da error al 'no encontrar' el elemento en SET
+print(planetas)
+
+# Limpiar SET
+planetas.clear()
+print(planetas)
+
+# Eliminar SET
+del planetas
+
+# Diccionario
+# Un diccionario esta compuesto por una palabra clave y una descripción
+# dict(key, value)
+
+diccionario = {
+    'IDE':'Integrated Develompent Enviroment',
+    'POO':'Programación Orientada a Objetos',
+    'SABD':'Sistema de Administración de Base de Datos'
+}
+print(len(diccionario))
+print(diccionario)
+
+# Acceder a un diccionario con una palabra clave
+print(diccionario['IDE'])
+print(diccionario.get('POO'))
+
+# Modificamos elementos de un diccionario
+diccionario['IDE'] = 'Entorno de Desarrollo Integrado'
+print(diccionario['IDE'])
+
+# Recorrer los elementos de un diccionario
+for key in diccionario: # De esta manera solo se recorren las KEY
+    print(key)
+
+# Es necesaria una función para recorrer el diccionario
+for key, value in diccionario.items():
+    print (key, value)
+
+# Otras formas de recorrer un diccionario
+for key in diccionario.keys():
+    print(key)
+
+for value in diccionario.values():
+    print(value)
+
+# Comprobar si un elemento se encuentra en el diccionario
+print('IDE' in diccionario)
+print('IDE' not in diccionario)
+
+# Agregar un elemento en el diccionario
+diccionario['PK'] = 'Primary Key'
+print(diccionario)
+
+# Eliminar un elemento del diccionario
+diccionario.pop('SABD')
+print(diccionario)
+
+# Vaciar un dict
+diccionario.clear()
+print(diccionario)
+
+# Borrar un diccionario
+del diccionario
+
+# Concatenación de listas
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+lista3 = lista1 + lista2
+print(lista3)
+
+lista3.extend([7, 8, 9]) # Función para agregar multiples elementos
+lista3.extend([1, 1, 1]) #En total hay 4 1
+print(lista3)
+
+print(lista3.index(5)) # Función para averiguar el index de un elemento
+
+# Como saber cuantos 'elementos repetidos' hay dentro de una lista
+print(lista3.count(1))
+
+# Para poner al revés una lista
+lista3.reverse()
+print(lista3)
+
+# Para que una lista repita sus elementos
+lista = [1,2,3] * 2 # Se repite, no se multiplican
+print(lista)
+
+# Métodos de ordenamiento
+lista3.sort() # Ordena de menor a mayor
+print(lista3)
+lista3.sort(reverse=True) # Ordena de mayor a menor
+print(lista3)
+
+# Repaso tupla
+tupla = (4, 'Hola', 6.78, [1, 2, 78], 'Hola') # Puede tener multiples elementos dentro
+print(tupla)
+
+print(4 in tupla)
+print(4 not in tupla)
