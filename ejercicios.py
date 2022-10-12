@@ -32,3 +32,19 @@ lista2 = list(tupla)
 for i in lista2:
     if i < 5:
         print(i)
+
+## Clase 3 Colecciones parte 3 | 30-08-2022
+
+seleccionArg = {
+    10:{'Nombre':'Lionel Messsi', 'Edad':35, 'Altura':1.70, 'Precio':'50 millones', 'Posición':'Extremo derecho'},
+    11:{'Nombre':'Angel Di Maria', 'Edad':34, 'Altura:':1.80, 'Precio':'12 millones', ' Posisción':'Extremo derecho'},
+    24:{'Nombre':'Paulo Dybala', 'Edad':28, 'Altura:':1.77, 'Precio':'35 millones', ' Posisción':'Mediocentro'},
+    19:{'Nombre':'Nicolás Otamendi', 'Edad':34, 'Altura:':1.83, 'Precio':'3.5 millones', ' Posisción':'Defensa central'},
+    1:{'Nombre':'Franco Armani', 'Edad':35, 'Altura:':1.89, 'Precio':'3.5 millones', ' Posisción':'Arquero'},
+    17:{'Nombre':'Papu Gómez', 'Edad':34, 'Altura:':1.87, 'Precio':'6 millones', ' Posisción':'Extremo izquierdo'},
+    7:{'Nombre':'Rodrigo de Paul', 'Edad':28, 'Altura:':1.82, 'Precio':'35 millones', ' Posisción':'Mediocentro'},
+    22:{'Nombre':'Lautaro Martínez', 'Edad':25, 'Altura:':1.85, 'Precio':'75 millones', ' Posisción':'Delantero centro'},
+    3:{'Nombre':'Nicolás Tagliafico', 'Edad':30, 'Altura:':1.81, 'Precio':'11 millones', ' Posisción':'Lateral izquierdo'},
+}
+for key, value in seleccionArg.items():
+    print(key, value)

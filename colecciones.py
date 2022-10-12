@@ -225,3 +225,91 @@ print(tupla)
 
 print(4 in tupla)
 print(4 not in tupla)
+
+## Colecciones parte 3 | 30-08-2022
+
+# Repaso set o conjunto
+conjunto2 = set()
+conjunto1 = {'bye', 'Hola'} # ACLARACIÓN: Se encuentra inicializado por las {} y no puede agregarse elementos
+conjunto2.add(7)
+conjunto2.add('Hola')
+print(conjunto2)
+print(3 not in conjunto1)
+
+# Igualdad de dos set o conjuntos
+print(conjunto1 == conjunto2) # Devuelve bool
+
+# Operaciones en set o conjuntos
+conjunto3 = conjunto1 | conjunto2
+print(conjunto3)
+
+conjunto3 = conjunto1 & conjunto2 # Que elementos tienen en comun
+print(conjunto3)
+
+conjunto3 = conjunto1 -  conjunto2 # Asigna el valor que esta en el conjunto1 y no en el conjunto2
+print(conjunto3)
+conjunto3 = conjunto2 - conjunto1
+print(conjunto3)
+
+conjunto3 = conjunto1 ^ conjunto2 # Solo muestra elementos NO compartidos
+print(conjunto3)
+
+conjunto3 = conjunto1 | conjunto2
+print(conjunto1.issubset(conjunto3)) # Verificamos si un conjunto es un subconjunto en otro
+print(conjunto2.issubset(conjunto3))
+
+print(conjunto3.issuperset(conjunto1)) # Verificamos si los elementos del 1 estan dentro del 3
+print(conjunto3.issuperset(conjunto2)) # Si es verdadero quere decir que es un superconjunto
+print(conjunto2.issuperset(conjunto3))
+
+# Como saber si ambos conjuntos son disconexos, esto es si no comparten elementos en comun
+print(conjunto1.isdisjoint(conjunto2)) #No hay cosas en común?
+
+# Convertir un conjunto totalemente en inmutable
+conjunto1 = frozenset # <- No se puede agregar, modificar ni eliminar elementos
+
+# Repaso diccionarios
+diccionario1 = {'Azul':'Blue', 'Rojo':'Red', 'Verde':'Green', 'Amarillo':'Yellow'}
+print(diccionario1)
+
+# Eliminar de un diccionario
+del (diccionario1['Azul'])
+print(diccionario1)
+
+# los diccionarios pueden almacenar diferentes tipos de datos
+diccionario2 = {'Ariel':{'Edad':40, 'Altura':1.83}, 'Osvaldo':[45, 1.85], 'Natalia':[35,1.67]}
+for key, value in diccionario2.items():
+    print(key, value)
+
+# Método con listas llamado PILAS
+# Pilas usando listas
+pila = [1, 2, 3]
+
+# Agregar elementos a la pila por el final
+pila.append(4)
+pila.append(5)
+print(pila)
+
+# Sacamos elementos desde el final
+pila.pop()
+print(pila)
+
+# Guardar un elemento borrado
+elementoBorrado = pila.pop()
+print(f'Sacamos el elemento: ', elementoBorrado)
+print(f'La pila ahora quedó así: ', pila)
+
+# Método con listas llamado COLA
+# Colas con listas
+# Estructura de datos de tipo fifo(first input / firt output)
+
+cola = ['Agustín', 'Ana', 'Micaela', 'Valentín']
+
+# Agregamos elementos al final de la cola
+cola.append('Lucas')
+print(cola)
+
+# Sacamos elementos de la cola
+seRetira = cola.pop(0)
+print(f'Atendido: ', seRetira)
+print(cola)
